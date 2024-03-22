@@ -1,7 +1,11 @@
 # Multiplayer_AR_Unity
 This project is Combination of Vuforia and Photon with simple Gameplay mechanics. 
 The Goal of players in the game is to collect as much coins possible before the timer ends!
+
+
 **How Join Game**
+
+
 -Change Photon appID from Photon settings
 -Create Random Rooms or Join Live Rooms shown as Live Rooms
 
