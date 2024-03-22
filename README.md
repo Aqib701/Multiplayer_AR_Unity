@@ -12,8 +12,9 @@ The Goal of players in the game is to collect as much coins possible before the 
 
 - Vuforia: https://assetstore.unity.com/packages/templates/packs/vuforia-engine-163598
 - Photon: https://assetstore.unity.com/packages/tools/network/photon-unity-networking-classic-free-1786
+**Short Used**
+<p align="center"><img src="https://github.com/Aqib701/Multiplayer_AR_Unity/assets/57903584/5bc9aa1d-8353-419f-95ae-9126096f40ef" width=100% height=100%></p>
 
-<p align="center"><img src="https://github.com/Aqib701/Multiplayer_AR_Unity/Assets/demo.gif" width=100% height=100%></p>
 
 - UnityVersion used: 2020.3.30f1
 - Vuforia Markerless AR is employed in developing the idea
