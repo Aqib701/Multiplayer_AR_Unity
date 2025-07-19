@@ -1,0 +1,38 @@
+# This .gitignore file should be placed at the root of your Unity project
+
+# User-specific files
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Ll]ibrary/
+[Tt]emp/
+Obj/
+[Bb]in/
+[Bb]uild/
+Build/
+
+# User-specific config files
+.vs/
+
+# Uncomment if you have a `build` folder
+# /build/
+
+# Uncomment if you want to ignore specific Unity folders
+# .vs2017/
+# .vs2019/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Uncomment the following line if you want to ignore the crash dumps
+# /crash.dmp
+
+# Unity generated files
+ExportedObj/
+.mono/
