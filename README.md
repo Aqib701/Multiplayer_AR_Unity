@@ -1,6 +1,6 @@
 # Multiplayer_AR_Unity
 This project is Combination of Vuforia and Photon with simple Gameplay mechanics. 
-The Goal of players in the game is to collect as much coins possible before the timer ends!
+The Goal of players in the game is to collect as much coins possible before the time ends!
 
 
 **How Join Game**
