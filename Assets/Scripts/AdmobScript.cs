@@ -1,0 +1,84 @@
+﻿using System;
+using UnityEngine;
+using System.Collections;
+using GoogleMobileAds.Api;
+
+public class AdmobScript : MonoBehaviour
+{
+	InterstitialAd interstitial;
+
+    // Use this for initialization
+
+    private void Awake()
+    {
+	    MobileAds.Initialize("ca-app-pub-1270745416614507~5522113165");
+    }
+
+    void Start()
+    {
+        //Request Ads
+        RequestBanner();
+		RequestInterstitial();
+		
+		
+		InvokeRepeating("showInterstitialAd",5,5);
+		InvokeRepeating("RequestBanner",2,2);
+		
+    }
+
+
+    private void Update()
+    {
+	    showInterstitialAd();
+    }
+
+
+    public void showInterstitialAd()
+    {
+        //Show Ad
+        if (interstitial.IsLoaded())
+        {
+            interstitial.Show();
+        }
+
+    }
+
+   private void RequestBanner()
+	{
+		#if UNITY_EDITOR
+			string adUnitId = "unused";
+		#elif UNITY_ANDROID
+			string adUnitId = "ca-app-pub-4697579006360442/5518347117";
+		#elif UNITY_IPHONE
+			string adUnitId = "INSERT_IOS_BANNER_AD_UNIT_ID_HERE";
+		#else
+			string adUnitId = "unexpected_platform";
+		#endif
+
+		// Create a 320x50 banner at the bottom of the screen.
+		BannerView bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
+		// Create an empty ad request.
+		AdRequest request = new AdRequest.Builder().Build();
+		// Load the banner with the request.
+		bannerView.LoadAd(request);
+	}
+	
+	private void RequestInterstitial()
+	{
+		#if UNITY_ANDROID
+			string adUnitId = "ca-app-pub-4697579006360442/1613571751";
+		#elif UNITY_IPHONE
+			string adUnitId = "INSERT_IOS_INTERSTITIAL_AD_UNIT_ID_HERE";
+		#else
+			string adUnitId = "unexpected_platform";
+		#endif
+
+		// Initialize an InterstitialAd.
+		interstitial = new InterstitialAd(adUnitId);
+		// Create an empty ad request.
+		AdRequest request = new AdRequest.Builder().Build();
+		// Load the interstitial with the request.
+		interstitial.LoadAd(request);
+	}
+
+}
